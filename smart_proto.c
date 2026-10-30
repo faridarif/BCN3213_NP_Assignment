@@ -8,7 +8,7 @@
  * never drift apart.
  */
 #define _POSIX_C_SOURCE 200809L
-#include "iot_proto.h"
+#include "smart_proto.h"
 
 #include <arpa/inet.h>
 #include <ctype.h>
