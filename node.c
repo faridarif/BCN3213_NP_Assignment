@@ -1,8 +1,8 @@
 /*
- * sensor_node.c - IoT Sensor Node (device simulator)
+ * node.c - IoT Sensor Node (device simulator)
  *
  * Simulates a temperature / humidity / battery node and talks to the
- * monitoring gateway using the hybrid TCP + UDP protocol from iot_proto.h.
+ * monitoring gateway using the hybrid TCP + UDP protocol from smart_proto.h.
  *
  * MODES (-m)
  *   hybrid  (default) TCP session for registration, heartbeats and commands;
@@ -21,11 +21,9 @@
  *     back-off (UDP readings keep flowing in hybrid mode while TCP is down)
  *   - malformed frames from the gateway are skipped, never fatal
  *   - SIGINT / SIGTERM / SHUTDOWN command: flush, close, exit cleanly
- *
- * Build: make     Run: ./sensor_node -i 1001 -s 127.0.0.1 -m hybrid
  */
 #define _POSIX_C_SOURCE 200809L
-#include "iot_proto.h"
+#include "smart_proto.h"
 
 #include <arpa/inet.h>
 #include <errno.h>
