@@ -1,5 +1,5 @@
 /*
- * gateway_server.c - Central Monitoring Gateway
+ * cenreal_gateway.c - Central Monitoring Gateway
  *
  * ARCHITECTURE
  *   One thread, one event loop.  A single multiplexer (epoll on Linux, poll()
@@ -24,7 +24,7 @@
  * Build: make     Run: ./gateway_server [-b addr] [-t tcp_port] [-u udp_port] [-l csv] [-q]
  */
 #define _POSIX_C_SOURCE 200809L
-#include "iot_proto.h"
+#include "smart_proto.h"
 
 #include <arpa/inet.h>
 #include <errno.h>
